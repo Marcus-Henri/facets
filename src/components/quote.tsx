@@ -57,7 +57,7 @@ export function Quote({ text, author, variant = "ethereal", className }: QuotePr
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.2 }}
             className={cn("relative z-10", getVariantStyles(), className)}
         >
             <blockquote className="relative">
