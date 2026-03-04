@@ -2,6 +2,8 @@ import Link from "next/link";
 import { ProjectsGallery } from "@/components/projects-gallery";
 import { InteractiveCV } from "@/components/interactive-cv";
 import { ContactForm } from "@/components/contact-form";
+import { Quote } from "@/components/quote";
+import { Guestbook } from "@/components/guestbook";
 
 export default function Home() {
   return (
@@ -51,9 +53,35 @@ export default function Home() {
       </section>
 
       {/* Sections rendering */}
+      <Quote
+        text="Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and freedom."
+        author="Viktor Frankl"
+        variant="ethereal"
+      />
+
       <ProjectsGallery />
+
+      <Quote
+        text="We are going to relentlessly chase perfection, knowing full well we will not catch it, because nothing is perfect. But we are going to relentlessly chase it, because in the process we will catch excellence. I am not remotely interested in just being good."
+        author="Vince Lombardi"
+        variant="modern"
+      />
+
       <InteractiveCV />
+
+      <Quote
+        text="To every man upon this earth / Death cometh soon or late. / And how can man die better / Than facing fearful odds, / For the ashes of his fathers, / And the temples of his Gods."
+        author="Horatius, by Thomas Macaulay"
+        variant="literary"
+      />
+
       <ContactForm />
+
+      <Guestbook
+        repoId="R_kgDONn5eKA"
+        category="General"
+        categoryId="DIC_kwDONn5eKM4CmB9P"
+      />
 
       {/* Footer */}
       <footer className="py-8 text-center border-t border-silver/50 bg-pearl-white">
