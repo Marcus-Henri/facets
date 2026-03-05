@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ProjectsGallery } from "@/components/projects-gallery";
 import { InteractiveCV } from "@/components/interactive-cv";
 import { ContactForm } from "@/components/contact-form";
-import { QuoteCarousel } from "@/components/quote-carousel";
+import { WisdomGrid } from "@/components/wisdom-grid";
 import { Guestbook } from "@/components/guestbook";
 
 export default function Home() {
@@ -55,11 +55,11 @@ export default function Home() {
 
       <ProjectsGallery />
 
-      <QuoteCarousel />
-
       <InteractiveCV />
 
       <ContactForm />
+
+      <WisdomGrid />
 
       <Guestbook
         repoId="R_kgDORd47XQ"
