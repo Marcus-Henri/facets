@@ -37,9 +37,10 @@ export function Guestbook({ repoId, category, categoryId }: GuestbookProps) {
                         reactionsEnabled="1"
                         emitMetadata="0"
                         inputPosition="top"
-                        theme="transparent_dark"
+                        theme="preferred_color_scheme"
                         lang="en"
                         loading="lazy"
+                        strict="0"
                     />
                 </div>
             </div>

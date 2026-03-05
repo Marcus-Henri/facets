@@ -62,9 +62,9 @@ export default function Home() {
       <ContactForm />
 
       <Guestbook
-        repoId="R_kgDONn5eKA"
-        category="General"
-        categoryId="DIC_kwDONn5eKM4CmB9P"
+        repoId="R_kgDORd47XQ"
+        category="Announcements"
+        categoryId="DIC_kwDORd47Xc4C3p5L"
       />
 
       {/* Footer */}
