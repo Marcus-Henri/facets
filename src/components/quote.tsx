@@ -18,9 +18,9 @@ export function Quote({ text, author, variant = "ethereal", className }: QuotePr
             case "ethereal":
                 return "text-center max-w-4xl mx-auto py-24 px-6 md:px-12";
             case "modern":
-                return "max-w-5xl mx-auto py-24 px-8 md:px-16 border-l-4 border-deep-indigo bg-white/40 shadow-sm rounded-r-xl my-24";
+                return "max-w-5xl mx-auto py-24 px-8 md:px-16 border-l-4 border-prismatic-blue glass-panel rounded-r-xl my-24 facet-border hover-prismatic transition-all duration-500";
             case "literary":
-                return "text-center max-w-3xl mx-auto py-32 px-6 md:px-12 bg-[image:var(--background-image-watercolor-gold)] bg-cover bg-center rounded-2xl shadow-lg border border-imperial-gold/30 my-24";
+                return "text-center max-w-3xl mx-auto py-32 px-6 md:px-12 bg-obsidian-base/40 backdrop-blur-md rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-facet-edge-gold my-24";
             default:
                 return "text-center max-w-4xl mx-auto py-24 px-6 md:px-12";
         }
@@ -29,26 +29,26 @@ export function Quote({ text, author, variant = "ethereal", className }: QuotePr
     const getTextStyles = () => {
         switch (variant) {
             case "ethereal":
-                return "text-3xl md:text-5xl font-serif text-deep-indigo leading-relaxed font-light italic mb-8 drop-shadow-sm";
+                return "text-3xl md:text-5xl font-serif text-white leading-relaxed font-light italic mb-8 drop-shadow-md";
             case "modern":
-                return "text-2xl md:text-4xl font-sans font-bold text-charcoal-violet uppercase tracking-tight leading-snug mb-8";
+                return "text-2xl md:text-4xl font-sans font-bold text-white uppercase tracking-tight leading-snug mb-8 drop-shadow-sm";
             case "literary":
-                return "text-2xl md:text-3xl font-serif text-charcoal-violet leading-loose italic mb-10";
+                return "text-2xl md:text-3xl font-serif text-text-secondary leading-loose italic mb-10";
             default:
-                return "text-3xl md:text-5xl font-serif text-deep-indigo leading-relaxed font-light italic mb-8 drop-shadow-sm";
+                return "text-3xl md:text-5xl font-serif text-white leading-relaxed font-light italic mb-8 drop-shadow-md";
         }
     };
 
     const getAuthorStyles = () => {
         switch (variant) {
             case "ethereal":
-                return "text-lg font-mono tracking-widest text-royal-purple uppercase";
+                return "text-lg font-mono tracking-widest text-prismatic-blue uppercase drop-shadow-[0_0_5px_rgba(79,195,247,0.5)]";
             case "modern":
-                return "text-xl font-sans font-bold text-deep-indigo";
+                return "text-xl font-sans font-bold text-white tracking-widest uppercase";
             case "literary":
-                return "text-lg font-serif font-bold text-deep-indigo tracking-wide";
+                return "text-lg font-serif font-bold text-imperial-gold tracking-wide";
             default:
-                return "text-lg font-mono tracking-widest text-royal-purple uppercase";
+                return "text-lg font-mono tracking-widest text-prismatic-blue uppercase";
         }
     };
 
@@ -62,7 +62,7 @@ export function Quote({ text, author, variant = "ethereal", className }: QuotePr
         >
             <blockquote className="relative">
                 {variant === "ethereal" && (
-                    <span className="absolute -top-16 -left-8 text-8xl text-soft-lavender/50 font-serif opacity-50 select-none">
+                    <span className="absolute -top-16 -left-8 text-8xl text-sapphire-glow/50 font-serif opacity-30 select-none">
                         &ldquo;
                     </span>
                 )}
@@ -70,7 +70,7 @@ export function Quote({ text, author, variant = "ethereal", className }: QuotePr
                     "{text}"
                 </p>
                 <footer className="flex items-center justify-center gap-4">
-                    {variant === "modern" && <div className="h-[2px] w-12 bg-royal-purple"></div>}
+                    {variant === "modern" && <div className="h-[2px] w-12 bg-prismatic-blue"></div>}
                     {variant === "literary" && <span className="text-imperial-gold">~</span>}
                     <cite className={cn(getAuthorStyles())}>
                         {variant !== "literary" && variant !== "modern" && "~ "}

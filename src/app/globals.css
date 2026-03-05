@@ -3,32 +3,43 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Core Theme Configuration - Ethereal Renaissance */
+/* Core Theme Configuration - Facets Theme */
 @theme {
   /* Base / Backgrounds */
-  --color-pearl-white: #FDFAFC;
-  --color-soft-lavender: #F3E8FF;
+  --color-obsidian-base: #0a0a0c;
+  --color-sapphire-deep: #0b1021;
+  --color-sapphire-glow: #1a237e;
 
-  /* Primary Accents */
+  /* Facets / Edges */
+  --color-facet-light: rgba(255, 255, 255, 0.12);
+  --color-facet-edge-gold: rgba(212, 175, 55, 0.4);
+  --color-facet-edge-silver: rgba(192, 192, 192, 0.3);
+  --color-facet-shadow: rgba(0, 0, 0, 0.8);
+
+  /* Text */
+  --color-text-primary: #f8f9fa;
+  --color-text-secondary: #a0aec0;
+
+  /* Accents */
   --color-imperial-gold: #D4AF37;
-  --color-royal-purple: #6B21A8;
+  --color-prismatic-blue: #4fc3f7;
+  --color-prismatic-purple: #b388ff;
 
-  /* Secondary Accents */
-  --color-electric-violet: #8B5CF6;
-  --color-silver: #C0C0C0;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-space-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
 
-  /* Text / Typography */
-  --color-deep-indigo: #1E1B4B;
-  --color-charcoal-violet: #2E294E;
+  /* Refractive Backgrounds */
+  --background-image-obsidian-gradient: radial-gradient(circle at 15% 50%, #11183b 0%, #0a0a0c 50%, #000000 100%);
+  --background-image-sapphire-gradient: radial-gradient(circle at 85% 30%, #1a237e 0%, #0b1021 60%, #020308 100%);
+  --background-image-mesh-pattern:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(45deg, rgba(212, 175, 55, 0.015) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(139, 92, 246, 0.015) 1px, transparent 1px);
+  --background-size-mesh: 60px 60px, 60px 60px, 85px 85px, 85px 85px;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-
-  /* Watercolor / Ethereal Gradients */
-  --background-image-watercolor-lavender: radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.08) 0%, rgba(253, 250, 252, 1) 70%), linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
-  --background-image-watercolor-gold: radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.08) 0%, rgba(253, 250, 252, 1) 70%), linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
-
+  /* Shadcn variables mapped to theme */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -48,11 +59,7 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -60,43 +67,11 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
+  /* Set root to dark mode for the Facets theme natively */
   --background: oklch(0.145 0 0);
+  /* Dark */
   --foreground: oklch(0.985 0 0);
+  /* Light */
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -113,19 +88,7 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --radius: 0.5rem;
 }
 
 @layer base {
@@ -134,6 +97,46 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-obsidian-base text-text-primary min-h-screen relative;
+    /* Apply base Facets background */
+    background-image: var(--background-image-obsidian-gradient);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .bg-mesh-pattern {
+    background-image: var(--background-image-mesh-pattern);
+    background-size: var(--background-size-mesh);
+    background-position: center;
+  }
+
+  /* Glassmorphism Refraction Effect */
+  .glass-panel {
+    @apply bg-sapphire-deep/30 backdrop-blur-xl border-t border-l border-facet-light border-b border-r border-[#000000]/50;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  }
+
+  /* Specific edge glowing borders indicating 'cuts' */
+  .facet-border {
+    @apply border border-transparent;
+    background: linear-gradient(135deg, var(--color-obsidian-base) 0%, var(--color-sapphire-deep) 100%) padding-box,
+      linear-gradient(135deg, var(--color-facet-edge-gold) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(0, 0, 0, 0.8) 100%) border-box;
+  }
+
+  /* Prismatic Hover Effect */
+  .hover-prismatic {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .hover-prismatic:hover {
+    box-shadow: 0 0 20px rgba(79, 195, 247, 0.3), inset 0 0 15px rgba(179, 136, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .hover-prismatic-button:hover {
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4), 0 0 15px rgba(139, 92, 246, 0.3), inset 0 0 10px rgba(179, 136, 255, 0.4);
+    border-color: rgba(212, 175, 55, 0.8);
   }
 }
