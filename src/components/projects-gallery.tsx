@@ -58,7 +58,7 @@ export function ProjectsGallery() {
                             </p>
 
                             <Link
-                                href="#"
+                                href="https://vercel.com/marcus-henris-projects/https-theheritageletters"
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-sapphire-deep/80 backdrop-blur-md text-white transition-all duration-300 font-sans font-bold tracking-widest uppercase text-sm facet-border hover-prismatic-button"
                             >
                                 Explore Archive <span className="text-lg">→</span>
@@ -103,7 +103,7 @@ export function ProjectsGallery() {
                             </p>
 
                             <Link
-                                href="#"
+                                href="https://marcus-henri.github.io/https-grammar-quiz-/"
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-sapphire-deep/80 backdrop-blur-md text-white transition-all duration-300 font-sans font-bold tracking-widest uppercase text-sm facet-border hover-prismatic-button"
                             >
                                 Launch Application <span className="text-lg">→</span>
