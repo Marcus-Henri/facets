@@ -58,7 +58,7 @@ export function ProjectsGallery() {
                             </p>
 
                             <Link
-                                href="https://vercel.com/marcus-henris-projects/https-theheritageletters"
+                                href="https://https-theheritageletters.vercel.app/"
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-sapphire-deep/80 backdrop-blur-md text-white transition-all duration-300 font-sans font-bold tracking-widest uppercase text-sm facet-border hover-prismatic-button"
                             >
                                 Explore Archive <span className="text-lg">→</span>
